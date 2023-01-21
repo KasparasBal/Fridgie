@@ -1,0 +1,16 @@
+.search-bar {
+  outline: none;
+  border: none;
+  border-radius: 2rem;
+
+  padding: 1rem;
+
+  width: 70%;
+
+  color: $color-grey-0;
+  background-color: $color-primary-darkest;
+
+  &::placeholder {
+    color: $color-grey-3;
+  }
+}
