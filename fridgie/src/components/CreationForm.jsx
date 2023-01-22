@@ -20,7 +20,7 @@ const CreationForm = () => {
   };
 
   return (
-    <form className="creation-form">
+    <form className="creation-form formHidden">
       <label className="creation-form_label" htmlFor="title">
         Title
       </label>

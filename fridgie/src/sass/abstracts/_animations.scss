@@ -1,0 +1,24 @@
+@keyframes enlarge {
+  0% {
+    transform: scale(90%);
+  }
+  100% {
+    transform: scale(100%);
+  }
+}
+@keyframes descend {
+  0% {
+    transform: translateY(-50rem);
+  }
+  100% {
+    transform: translateY(0rem);
+  }
+}
+@keyframes ascend {
+  0% {
+    transform: translateY(0rem);
+  }
+  100% {
+    transform: translateY(-50rem);
+  }
+}
