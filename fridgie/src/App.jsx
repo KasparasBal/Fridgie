@@ -1,14 +1,16 @@
+import { useState } from "react";
 import "./sass/main.scss";
-import { Fragment } from "react";
 import Navbar from "./components/Navbar";
 import CreationForm from "./components/CreationForm";
+import FormVisibility from "./store/formVisibility-context";
 
 const App = () => {
+  const [formVisibility, setFormVisibility] = useState("formHidden");
   return (
-    <Fragment>
+    <FormVisibility.Provider value={[formVisibility, setFormVisibility]}>
       <Navbar />
       <CreationForm />
-    </Fragment>
+    </FormVisibility.Provider>
   );
 };
 

@@ -1,7 +1,9 @@
-import { useState } from "react";
+import FormVisibility from "../store/formVisibility-context";
+import { useState, useContext } from "react";
 import Checkbox from "./CheckBox";
 
 const CreationForm = () => {
+  const [formVisibility] = useContext(FormVisibility);
   const [checked, setChecked] = useState();
   const [openedInputClass, setOpenedInputClass] = useState("hiddenForm");
   const [openedLabelClass, setOpenedLabelClass] = useState("hiddenForm");
@@ -20,7 +22,7 @@ const CreationForm = () => {
   };
 
   return (
-    <form className="creation-form formHidden">
+    <form className={`creation-form ${formVisibility}`}>
       <label className="creation-form_label" htmlFor="title">
         Title
       </label>
