@@ -3,6 +3,7 @@ import "./sass/main.scss";
 import Navbar from "./components/Navbar";
 import CreationForm from "./components/CreationForm";
 import FormVisibility from "./store/formVisibility-context";
+import Feed from "./components/Feed";
 
 const App = () => {
   const [formVisibility, setFormVisibility] = useState("formHidden");
@@ -10,6 +11,7 @@ const App = () => {
     <FormVisibility.Provider value={[formVisibility, setFormVisibility]}>
       <Navbar />
       <CreationForm />
+      <Feed />
     </FormVisibility.Provider>
   );
 };

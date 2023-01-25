@@ -8,17 +8,17 @@
 }
 @keyframes descend {
   0% {
-    transform: translateY(-50rem);
+    transform: translate(-50%, -50rem);
   }
   100% {
-    transform: translateY(0rem);
+    transform: translate(-50%, 0rem);
   }
 }
 @keyframes ascend {
   0% {
-    transform: translateY(0rem);
+    transform: translateX(-50%);
   }
   100% {
-    transform: translateY(-50rem);
+    transform: translate(-50%, -50rem);
   }
 }

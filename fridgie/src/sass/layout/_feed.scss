@@ -1,0 +1,117 @@
+.feed {
+  position: relative;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.feed_content {
+  width: 100%;
+  margin-top: 5rem;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+.row {
+  position: relative;
+  border: 1px solid $color-grey-3;
+  width: 98%;
+  min-height: 4rem;
+  display: flex;
+  align-items: center;
+  background-color: $color-grey-0;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  color: $color-grey-9;
+  font-size: 1.5rem;
+
+  box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.4);
+
+  &_image {
+    height: 3rem;
+    width: 3rem;
+    border-radius: 1rem;
+    margin-right: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $color-primary;
+    box-shadow: 0 0.2rem 0.2rem rgba(0, 0, 0, 0.5);
+
+    &_comp {
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+  &_amount {
+    background-color: $color-secondary;
+    position: absolute;
+    top: -0.1rem;
+    right: 2rem;
+    color: $color-grey-0;
+    padding: 0.5rem;
+    border-radius: 0 0 1rem 1rem;
+    box-shadow: 0 0.2rem 0.2rem rgba(0, 0, 0, 0.5);
+  }
+  &_opened {
+    background-color: #37b24d;
+    position: absolute;
+    top: -0.1rem;
+    right: 5rem;
+    color: $color-grey-0;
+    padding: 0.5rem;
+    border-radius: 0 0 1rem 1rem;
+    box-shadow: 0 0.2rem 0.2rem rgba(0, 0, 0, 0.5);
+  }
+}
+
+.feed_sort-btn {
+  cursor: pointer;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  top: 2rem;
+  right: 2rem;
+  background-color: $color-grey-5;
+  width: 6rem;
+  height: 2.5rem;
+  padding: 0.5rem;
+  border-radius: 100rem;
+  border: 1px solid $color-grey-6;
+}
+.feed_sort-btn.rows {
+  justify-content: start;
+  &::after {
+    content: "≡";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: $color-grey-0;
+    color: $color-grey-6;
+    font-weight: 300;
+    font-size: 1.6rem;
+    width: 1.7rem;
+    height: 1.7rem;
+    border-radius: 100rem;
+  }
+}
+.feed_sort-btn.cards {
+  justify-content: end;
+  &::after {
+    content: "▢";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-grey-0;
+    color: $color-grey-6;
+    font-weight: 300;
+    font-size: 1.5rem;
+    width: 1.7rem;
+    height: 1.7rem;
+    border-radius: 100rem;
+  }
+}

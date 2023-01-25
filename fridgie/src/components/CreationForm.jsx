@@ -9,7 +9,6 @@ const CreationForm = () => {
   const [openedLabelClass, setOpenedLabelClass] = useState("hiddenForm");
 
   const checkedHandler = (e) => {
-    console.log(e.target.checked);
     e.target.checked === true
       ? setOpenedInputClass("creation-form_input-text")
       : setOpenedInputClass("hiddenForm");
